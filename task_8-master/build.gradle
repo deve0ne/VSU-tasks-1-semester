@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.deveone'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    flatDir dirs: "${rootDir}/lib"
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    implementation group: 'com.intellij', name: 'forms_rt', version: '7.0.3'
+}
+
+test {
+    useJUnitPlatform()
+}
